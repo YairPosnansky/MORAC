@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20250129-1541-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.27.1"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="DESKTOP-34L10TO"
+	OSRelease=" Personal"
+	OSVersion=" (Build 9200)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString=""
+	VendorID="Unknown Manufacturer"
+	FamilyID="0"
+	ModelID="0"
+	ProcessorCacheSize="0"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="8"
+	TotalVirtualMemory="42852"
+	TotalPhysicalMemory="32703"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="3000"
+	>
+	<Testing>
+		<StartDateTime>Jan 29 18:27 Jerusalem Standard Time</StartDateTime>
+		<StartTestTime>1738168032</StartTestTime>
+		<TestList>
+			<Test>./lexer_test</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>lexer_test</Name>
+			<Path>.</Path>
+			<FullName>./lexer_test</FullName>
+			<FullCommandLine>C:\Users\posna\Desktop\DEV\YaronJava\MORAC\build\test_lexer.exe</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0113416</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>C:\Users\posna\Desktop\DEV\YaronJava\MORAC\build\test_lexer.exe</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyllF9rwjAUxd/zKe7b9GFltu4PlT5UjVJW21H7MBh7yNo4AzWRJm4tsu++qKvotCrbfQm5SX6ce+AEOY4DMZWK8XfoEskS6NMkIzlRTHAJhKcQzmm11bfRWCzyhEIiUmojxhXMCOONJiwR6Fo1CnCgbXbW+0kmiIJSdyyj1d70cqoWOYeig74QQj4tWEIycDnJSskkhAs1XygbXf+jUBw+4sAGL4hhr3z8jEfYhquV0J260kdeoA9aAL3Q1+sW0cdB7A08HP1GrAY/hTArhP/kRjg4pqKxr64eEdUimpci/G7k9vAxxPIMwvq7neYP4va8nUWNigpxVyHc8dgbHvXCOYO43xkED7cSdhFt8zTioUKM8cjTnTA4QHTOqNgiBn7o7hm6RWxic4iwLrezrFFh7dppGAZ6iac6dXOSKxATUFMKSn8IINYxhE8idWBn4oOmIBnXyWcKaJFQmsrN5WlO5VRk6ep168Zsw1upAcYr+gZ4pf3K====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Jan 29 18:27 Jerusalem Standard Time</EndDateTime>
+		<EndTestTime>1738168032</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

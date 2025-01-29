@@ -1,0 +1,4 @@
+C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/build/CMakeFiles/morac_lib.dir
+C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/build/CMakeFiles/test_lexer.dir
+C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/build/CMakeFiles/edit_cache.dir
+C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/build/CMakeFiles/rebuild_cache.dir

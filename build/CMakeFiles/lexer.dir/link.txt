@@ -1,0 +1,2 @@
+C:\mingw64\bin\ar.exe qc liblexer.a CMakeFiles/lexer.dir/lib/lexer.c.obj
+C:\mingw64\bin\ranlib.exe liblexer.a

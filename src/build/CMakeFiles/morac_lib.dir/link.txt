@@ -1,0 +1,2 @@
+C:\mingw64\bin\ar.exe qc libmorac_lib.a CMakeFiles/morac_lib.dir/src/token.c.obj CMakeFiles/morac_lib.dir/src/lexer.c.obj CMakeFiles/morac_lib.dir/src/lexer/chartype.c.obj CMakeFiles/morac_lib.dir/src/lexer/state.c.obj CMakeFiles/morac_lib.dir/src/lexer/state_utils.c.obj
+C:\mingw64\bin\ranlib.exe libmorac_lib.a
