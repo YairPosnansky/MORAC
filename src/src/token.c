@@ -1,12 +1,11 @@
-#include <string.h>
-#include <stdio.h>
 #include "token.h"
+#include <stdio.h>
+#include <string.h>
 
-Token *create_token(TokenType type, const char *lexeme, int line, int column)
-{
+// Token Lifecycle
+Token *create_token(TokenType type, const char *lexeme, int line, int column) {
   Token *token = (Token *)malloc(sizeof(Token));
-  if (!token)
-  {
+  if (!token) {
     return NULL;
   }
 
@@ -14,31 +13,23 @@ Token *create_token(TokenType type, const char *lexeme, int line, int column)
   token->line = line;
   token->column = column;
 
-  if (lexeme)
-  {
+  if (lexeme) {
     strncpy(token->lexeme, lexeme, MAX_LEXEME_LENGTH - 1);
     token->lexeme[MAX_LEXEME_LENGTH - 1] = '\0';
-  }
-  else
-  {
+  } else {
     token->lexeme[0] = '\0';
   }
 
   return token;
 }
-
-void free_token(Token *token)
-{
-  if (token)
-  {
+void free_token(Token *token) {
+  if (token) {
     free(token);
   }
 }
 
-const char *get_token_name(TokenType type)
-{
-  switch (type)
-  {
+const char *get_token_name(TokenType type) {
+  switch (type) {
   case TOKEN_EOF:
     return "EOF";
   case TOKEN_INT:
@@ -140,12 +131,9 @@ const char *get_token_name(TokenType type)
   }
 }
 
-TokenType get_keyword_token(const char *lexeme)
-{
-  for (int i = 0; keywords[i].keyword != NULL; i++)
-  {
-    if (strcmp(keywords[i].keyword, lexeme) == 0)
-    {
+TokenType get_keyword_token(const char *lexeme) {
+  for (int i = 0; keywords[i].keyword != NULL; i++) {
+    if (strcmp(keywords[i].keyword, lexeme) == 0) {
       return keywords[i].type;
     }
   }

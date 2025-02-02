@@ -22,8 +22,7 @@ int is_valid_number_format(const char *lexeme);
 int is_valid_float_format(const char *lexeme);
 
 // State context
-typedef struct
-{
+typedef struct {
   char *position;
   int line;
   int column;

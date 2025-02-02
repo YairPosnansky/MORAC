@@ -2,7 +2,8 @@
   "files.associations": {
     "lexer.h": "c",
     "string.h": "c",
-    "stdlib.h": "c"
+    "stdlib.h": "c",
+    "token.h": "c"
   },
   "cmake.sourceDirectory": "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src"
 }

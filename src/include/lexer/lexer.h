@@ -1,19 +1,19 @@
 #ifndef MORAC_LEXER_H
 #define MORAC_LEXER_H
 
-#include <stdio.h>
-#include "token.h"
 #include "lexer/state.h"
 #include "lexer/state_utils.h"
+#include "token.h"
+#include <stdio.h>
 
-typedef struct
-{
-  char *source;         // Source code buffer
-  char *current;        // Current position in source
-  int line;             // Current line number
-  int column;           // Current column number
-  StateContext context; // For backtracking
-  char *lexeme_start;   // Start of current lexeme
+
+typedef struct {
+  char *source;
+  char *current;
+  int line;
+  int column;
+  StateContext context;
+  char *lexeme_start;
 } Lexer;
 
 // Lexer lifecycle

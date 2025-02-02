@@ -3,8 +3,9 @@
 
 #include "chartype.h"
 
-typedef enum
-{
+#define STATE_COUNT 12
+
+typedef enum {
   STATE_START,
   STATE_IDENTIFIER,
   STATE_NUMBER,
@@ -15,6 +16,7 @@ typedef enum
   STATE_SLASH,
   STATE_LINE_COMMENT,
   STATE_BLOCK_COMMENT,
+  // Final States
   STATE_DONE,
   STATE_ERROR
 } LexerState;
@@ -23,7 +25,7 @@ typedef enum
 typedef LexerState (*StateTransitionFn)(char c);
 
 // State transition table
-extern LexerState state_transitions[12][17]; // [STATE_COUNT][CHAR_TYPE_COUNT]
+extern LexerState state_transitions[STATE_COUNT][CHAR_TYPE_COUNT];
 
 // Function declarations
 LexerState get_next_state(LexerState current_state, CharType input);

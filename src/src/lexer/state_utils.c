@@ -1,12 +1,11 @@
-#include <string.h>
-#include <ctype.h>
 #include "../../include/lexer/state_utils.h"
+#include <ctype.h>
+#include <string.h>
+
 
 // Compound operator handling
-int is_compound_operator(char current, char next)
-{
-  switch (current)
-  {
+int is_compound_operator(char current, char next) {
+  switch (current) {
   case '+':
     return next == '+' || next == '=';
   case '-':
@@ -32,10 +31,8 @@ int is_compound_operator(char current, char next)
   }
 }
 
-TokenType get_compound_operator_type(char first, char next)
-{
-  switch (first)
-  {
+TokenType get_compound_operator_type(char first, char next) {
+  switch (first) {
   case '+':
     if (next == '+')
       return TOKEN_INCREMENT;
@@ -85,39 +82,30 @@ TokenType get_compound_operator_type(char first, char next)
 }
 
 // Comment handling
-int is_block_comment_end(char current, char next)
-{
+int is_block_comment_end(char current, char next) {
   return current == '*' && next == '/';
 }
 
-void skip_line_comment(char **source)
-{
-  while (**source != '\n' && **source != '\0')
-  {
+void skip_line_comment(char **source) {
+  while (**source != '\n' && **source != '\0') {
     (*source)++;
   }
-  if (**source == '\n')
-  {
+  if (**source == '\n') {
     (*source)++;
   }
 }
 
-void skip_block_comment(char **source)
-{
+void skip_block_comment(char **source) {
   int nesting = 1; // Current comment level
 
-  while (nesting > 0 && **source != '\0')
-  {
+  while (nesting > 0 && **source != '\0') {
     char current = **source;
     (*source)++;
 
-    if (current == '/' && **source == '*')
-    {
+    if (current == '/' && **source == '*') {
       nesting++;
       (*source)++;
-    }
-    else if (current == '*' && **source == '/')
-    {
+    } else if (current == '*' && **source == '/') {
       nesting--;
       (*source)++;
     }
@@ -125,16 +113,13 @@ void skip_block_comment(char **source)
 }
 
 // String/Char literal handling
-int is_escape_sequence(char next)
-{
-  return next == 'n' || next == 't' || next == 'r' ||
-         next == '\\' || next == '\'' || next == '\"';
+int is_escape_sequence(char next) {
+  return next == 'n' || next == 't' || next == 'r' || next == '\\' ||
+         next == '\'' || next == '\"';
 }
 
-char process_escape_sequence(char next)
-{
-  switch (next)
-  {
+char process_escape_sequence(char next) {
+  switch (next) {
   case 'n':
     return '\n';
   case 't':
@@ -153,8 +138,7 @@ char process_escape_sequence(char next)
 }
 
 // Number validation
-int is_valid_number_format(const char *lexeme)
-{
+int is_valid_number_format(const char *lexeme) {
   // Check if empty
   if (!lexeme || !*lexeme)
     return 0;
@@ -164,8 +148,7 @@ int is_valid_number_format(const char *lexeme)
     return 0;
 
   // Check remaining characters
-  while (*++lexeme)
-  {
+  while (*++lexeme) {
     if (!isdigit(*lexeme))
       return 0;
   }
@@ -173,8 +156,7 @@ int is_valid_number_format(const char *lexeme)
   return 1;
 }
 
-int is_valid_float_format(const char *lexeme)
-{
+int is_valid_float_format(const char *lexeme) {
   // Check if empty
   if (!lexeme || !*lexeme)
     return 0;
@@ -186,16 +168,12 @@ int is_valid_float_format(const char *lexeme)
   int decimal_points = 0;
 
   // Check remaining characters
-  while (*++lexeme)
-  {
-    if (*lexeme == '.')
-    {
+  while (*++lexeme) {
+    if (*lexeme == '.') {
       decimal_points++;
       if (decimal_points > 1)
         return 0;
-    }
-    else if (!isdigit(*lexeme))
-    {
+    } else if (!isdigit(*lexeme)) {
       return 0;
     }
   }
@@ -205,10 +183,9 @@ int is_valid_float_format(const char *lexeme)
 }
 
 // State context management
-void save_state(StateContext *context, char *position, int line, int column, LexerState state)
-{
-  if (context)
-  {
+void save_state(StateContext *context, char *position, int line, int column,
+                LexerState state) {
+  if (context) {
     context->position = position;
     context->line = line;
     context->column = column;
@@ -216,10 +193,9 @@ void save_state(StateContext *context, char *position, int line, int column, Lex
   }
 }
 
-void restore_state(StateContext *context, char **position, int *line, int *column, LexerState *state)
-{
-  if (context)
-  {
+void restore_state(StateContext *context, char **position, int *line,
+                   int *column, LexerState *state) {
+  if (context) {
     *position = context->position;
     *line = context->line;
     *column = context->column;
