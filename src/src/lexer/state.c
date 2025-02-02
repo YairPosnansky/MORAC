@@ -1,6 +1,6 @@
 #include "lexer/state.h"
 
-// State transition table - static definition
+// State transition table
 LexerState state_transitions[12][17] = {
     // STATE_START
     {
@@ -244,7 +244,6 @@ LexerState state_transitions[12][17] = {
 
 LexerState get_next_state(LexerState current_state, CharType input)
 {
-  // Bounds checking
   if (current_state < 0 || current_state >= 12 || input < 0 || input >= 17)
   {
     return STATE_ERROR;

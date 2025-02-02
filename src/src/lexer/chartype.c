@@ -45,7 +45,6 @@ CharType get_char_type(char c)
   if (is_quote(c))
     return CHAR_QUOTE;
 
-  // Single-character tokens
   switch (c)
   {
   case '/':

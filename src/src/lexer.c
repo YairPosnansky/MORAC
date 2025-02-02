@@ -9,7 +9,6 @@ Lexer *lexer_create(const char *source)
   if (!lexer)
     return NULL;
 
-  // Copy source to internal buffer
   size_t len = strlen(source) + 1;
   lexer->source = (char *)malloc(len);
   if (!lexer->source)
@@ -19,7 +18,6 @@ Lexer *lexer_create(const char *source)
   }
   strcpy(lexer->source, source);
 
-  // Initialize lexer state
   lexer->current = lexer->source;
   lexer->lexeme_start = lexer->current;
   lexer->line = 1;
@@ -138,7 +136,6 @@ Token *lexer_next_token(Lexer *lexer)
   CharType char_type = get_char_type(c);
   LexerState state = STATE_START;
 
-  // Inside lexer_next_token function
   while (!is_final_state(state))
   {
     state = get_next_state(state, char_type);
@@ -147,7 +144,6 @@ Token *lexer_next_token(Lexer *lexer)
     {
     case STATE_START:
     {
-      // Move to next character and update char_type
       c = lexer_advance(lexer);
       char_type = get_char_type(c);
       break;
@@ -178,7 +174,7 @@ Token *lexer_next_token(Lexer *lexer)
 
       if (lexer_peek(lexer) == '.' && is_digit(lexer_peek_next(lexer)))
       {
-        lexer_advance(lexer); // consume '.'
+        lexer_advance(lexer);
         while (is_digit(lexer_peek(lexer)))
         {
           lexer_advance(lexer);
@@ -195,8 +191,8 @@ Token *lexer_next_token(Lexer *lexer)
       {
         if (lexer_peek(lexer) == '\\' && is_escape_sequence(lexer_peek_next(lexer)))
         {
-          lexer_advance(lexer); // consume '\'
-          lexer_advance(lexer); // consume escape char
+          lexer_advance(lexer);
+          lexer_advance(lexer);
         }
         else
         {
@@ -210,7 +206,7 @@ Token *lexer_next_token(Lexer *lexer)
         return lexer_make_token(lexer, TOKEN_ERROR);
       }
 
-      lexer_advance(lexer); // closing quote
+      lexer_advance(lexer);
       return lexer_make_token(lexer, TOKEN_STRING_LIT);
     }
 
@@ -307,55 +303,48 @@ Token *lexer_next_token(Lexer *lexer)
     case STATE_FLOAT:
     case STATE_CHAR:
     {
-      // Skip the opening quote
       char quote_type = lexer->lexeme_start[0];
 
-      // For character literals
       if (quote_type == '\'')
       {
-        // Move past opening quote
         lexer_advance(lexer);
 
-        // Read the character (handle escape sequence if present)
         if (lexer_peek(lexer) == '\\')
         {
-          lexer_advance(lexer); // consume backslash
+          lexer_advance(lexer);
           if (!is_escape_sequence(lexer_peek(lexer)))
           {
             lexer_error(lexer, "Invalid escape sequence");
             return lexer_make_token(lexer, TOKEN_ERROR);
           }
-          lexer_advance(lexer); // consume escape char
+          lexer_advance(lexer);
         }
         else
         {
-          lexer_advance(lexer); // consume regular char
+          lexer_advance(lexer);
         }
 
-        // Check for closing quote
         if (lexer_peek(lexer) != '\'')
         {
           lexer_error(lexer, "Character literal must contain exactly one character");
           return lexer_make_token(lexer, TOKEN_ERROR);
         }
-        lexer_advance(lexer); // consume closing quote
-
+        lexer_advance(lexer);
         return lexer_make_token(lexer, TOKEN_CHAR_LIT);
       }
-      // For string literals (existing code)
       else if (quote_type == '"')
       {
         while (lexer_peek(lexer) != '"' && !lexer_is_at_end(lexer))
         {
           if (lexer_peek(lexer) == '\\')
           {
-            lexer_advance(lexer); // consume '\'
+            lexer_advance(lexer);
             if (!is_escape_sequence(lexer_peek(lexer)))
             {
               lexer_error(lexer, "Invalid escape sequence");
               return lexer_make_token(lexer, TOKEN_ERROR);
             }
-            lexer_advance(lexer); // consume escape char
+            lexer_advance(lexer);
           }
           else
           {
@@ -369,14 +358,13 @@ Token *lexer_next_token(Lexer *lexer)
           return lexer_make_token(lexer, TOKEN_ERROR);
         }
 
-        lexer_advance(lexer); // closing quote
+        lexer_advance(lexer);
         return lexer_make_token(lexer, TOKEN_STRING_LIT);
       }
       break;
     }
     case STATE_LINE_COMMENT:
     case STATE_BLOCK_COMMENT:
-      // These states are handled through state transitions
       break;
 
     default:

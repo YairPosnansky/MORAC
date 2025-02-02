@@ -5,18 +5,18 @@
 
 typedef enum
 {
-  STATE_START,         // Initial state
-  STATE_IDENTIFIER,    // Processing identifier
-  STATE_NUMBER,        // Processing number
-  STATE_FLOAT,         // Processing float number
-  STATE_OPERATOR,      // Processing operator
-  STATE_CHAR,          // Processing char literal
-  STATE_STRING,        // Processing string literal
-  STATE_SLASH,         // Encountered '/', might be comment
-  STATE_LINE_COMMENT,  // Processing line comment
-  STATE_BLOCK_COMMENT, // Processing block comment
-  STATE_DONE,          // End of token
-  STATE_ERROR          // Error state
+  STATE_START,
+  STATE_IDENTIFIER,
+  STATE_NUMBER,
+  STATE_FLOAT,
+  STATE_OPERATOR,
+  STATE_CHAR,
+  STATE_STRING,
+  STATE_SLASH,
+  STATE_LINE_COMMENT,
+  STATE_BLOCK_COMMENT,
+  STATE_DONE,
+  STATE_ERROR
 } LexerState;
 
 // State transition function type

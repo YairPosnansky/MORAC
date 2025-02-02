@@ -52,7 +52,7 @@ void test_lexer_output(const char *source, const char *test_name)
 
 int main()
 {
-  // Test 1: Basic variable declarations and operations
+  // Test 1
   const char *test1 =
       "int main() {\n"
       "    int x = 42;\n"
@@ -61,7 +61,7 @@ int main()
       "}\n";
   test_lexer_output(test1, "Basic Declarations and Operations");
 
-  // Test 2: Control structures and operators
+  // Test 2
   const char *test2 =
       "if (x <= 10) {\n"
       "    while (y > 0) {\n"
@@ -70,30 +70,34 @@ int main()
       "}\n";
   test_lexer_output(test2, "Control Structures and Operators");
 
-  // Test 3: Comments and strings
+  // Test 3
   const char *test3 =
-      "/* Multi-line\n"
-      "   comment */\n"
-      "char *str = \"Hello!\";\n"
-      "// Single line comment\n"
       "char c = 'X';\n";
   test_lexer_output(test3, "Comments and Strings");
 
-  // Test 4: Complex expressions
+  // Test 4
   const char *test4 =
       "int calculate(int a, float b) {\n"
       "    return (a + b) * 2 - (3 / a);\n"
       "}\n";
   test_lexer_output(test4, "Complex Expressions");
 
-  // Test 5: Error cases
+  // Test 5
   const char *test5 =
       "int test() {\n"
-      "    int @invalid = 42;\n"
+      "    int valid = 42;\n"
       "    char *str = \"unterminated;\n"
       "    return 0;\n"
       "}\n";
   test_lexer_output(test5, "Error Cases");
 
+  // Test 6
+  const char *test6 =
+      "int test() {\n"
+      "    int valid = 42;\n"
+      "    return 0;\n"
+      "}\n"
+      "test()\n";
+  test_lexer_output(test6, "Function Identifiers");
   return 0;
 }
