@@ -24,8 +24,8 @@
 	ProcessorClockFrequency="3000"
 	>
 	<Testing>
-		<StartDateTime>Jan 29 18:27 Jerusalem Standard Time</StartDateTime>
-		<StartTestTime>1738168032</StartTestTime>
+		<StartDateTime>Jan 29 18:33 Jerusalem Standard Time</StartDateTime>
+		<StartTestTime>1738168399</StartTestTime>
 		<TestList>
 			<Test>./lexer_test</Test>
 		</TestList>
@@ -36,7 +36,7 @@
 			<FullCommandLine>C:\Users\posna\Desktop\DEV\YaronJava\MORAC\build\test_lexer.exe</FullCommandLine>
 			<Results>
 				<NamedMeasurement type="numeric/double" name="Execution Time">
-					<Value>0.0113416</Value>
+					<Value>0.0105582</Value>
 				</NamedMeasurement>
 				<NamedMeasurement type="numeric/double" name="Processors">
 					<Value>1</Value>
@@ -55,8 +55,8 @@
 				</Measurement>
 			</Results>
 		</Test>
-		<EndDateTime>Jan 29 18:27 Jerusalem Standard Time</EndDateTime>
-		<EndTestTime>1738168032</EndTestTime>
+		<EndDateTime>Jan 29 18:33 Jerusalem Standard Time</EndDateTime>
+		<EndTestTime>1738168399</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

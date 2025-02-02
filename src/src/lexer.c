@@ -306,6 +306,74 @@ Token *lexer_next_token(Lexer *lexer)
 
     case STATE_FLOAT:
     case STATE_CHAR:
+    {
+      // Skip the opening quote
+      char quote_type = lexer->lexeme_start[0];
+
+      // For character literals
+      if (quote_type == '\'')
+      {
+        // Move past opening quote
+        lexer_advance(lexer);
+
+        // Read the character (handle escape sequence if present)
+        if (lexer_peek(lexer) == '\\')
+        {
+          lexer_advance(lexer); // consume backslash
+          if (!is_escape_sequence(lexer_peek(lexer)))
+          {
+            lexer_error(lexer, "Invalid escape sequence");
+            return lexer_make_token(lexer, TOKEN_ERROR);
+          }
+          lexer_advance(lexer); // consume escape char
+        }
+        else
+        {
+          lexer_advance(lexer); // consume regular char
+        }
+
+        // Check for closing quote
+        if (lexer_peek(lexer) != '\'')
+        {
+          lexer_error(lexer, "Character literal must contain exactly one character");
+          return lexer_make_token(lexer, TOKEN_ERROR);
+        }
+        lexer_advance(lexer); // consume closing quote
+
+        return lexer_make_token(lexer, TOKEN_CHAR_LIT);
+      }
+      // For string literals (existing code)
+      else if (quote_type == '"')
+      {
+        while (lexer_peek(lexer) != '"' && !lexer_is_at_end(lexer))
+        {
+          if (lexer_peek(lexer) == '\\')
+          {
+            lexer_advance(lexer); // consume '\'
+            if (!is_escape_sequence(lexer_peek(lexer)))
+            {
+              lexer_error(lexer, "Invalid escape sequence");
+              return lexer_make_token(lexer, TOKEN_ERROR);
+            }
+            lexer_advance(lexer); // consume escape char
+          }
+          else
+          {
+            lexer_advance(lexer);
+          }
+        }
+
+        if (lexer_is_at_end(lexer))
+        {
+          lexer_error(lexer, "Unterminated string");
+          return lexer_make_token(lexer, TOKEN_ERROR);
+        }
+
+        lexer_advance(lexer); // closing quote
+        return lexer_make_token(lexer, TOKEN_STRING_LIT);
+      }
+      break;
+    }
     case STATE_LINE_COMMENT:
     case STATE_BLOCK_COMMENT:
       // These states are handled through state transitions

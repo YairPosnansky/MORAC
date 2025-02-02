@@ -1,2 +1,2 @@
-lexer_test 9 0.0194963
+lexer_test 10 0.0186025
 ---

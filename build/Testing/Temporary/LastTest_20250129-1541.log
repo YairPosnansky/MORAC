@@ -1,10 +1,10 @@
-Start testing: Jan 29 18:27 Jerusalem Standard Time
+Start testing: Jan 29 18:33 Jerusalem Standard Time
 ----------------------------------------------------------
 1/1 Testing: lexer_test
 1/1 Test: lexer_test
 Command: "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/build/test_lexer.exe"
 Directory: C:/Users/posna/Desktop/DEV/YaronJava/MORAC/build
-"lexer_test" start time: Jan 29 18:27 Jerusalem Standard Time
+"lexer_test" start time: Jan 29 18:33 Jerusalem Standard Time
 Output:
 ----------------------------------------------------------
 
@@ -167,8 +167,8 @@ TOKEN: ERROR            LEXEME: '@              '  LINE: 2  COL: 6
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"lexer_test" end time: Jan 29 18:27 Jerusalem Standard Time
+"lexer_test" end time: Jan 29 18:33 Jerusalem Standard Time
 "lexer_test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jan 29 18:27 Jerusalem Standard Time
+End testing: Jan 29 18:33 Jerusalem Standard Time
