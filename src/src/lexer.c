@@ -99,8 +99,8 @@ Token *lexer_make_token(Lexer *lexer, TokenType type) {
 }
 
 void lexer_error(Lexer *lexer, const char *message) {
-  fprintf(stderr, "[line %d:%d] Error: %s\n", lexer->line, lexer->column,
-          message);
+  fprintf(stderr, "\033[0;31m[line %d:%d] Error: %s\n\033\033[0;37m",
+          lexer->line, lexer->column, message);
 }
 
 Token *lexer_next_token(Lexer *lexer) {

@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/posna/Desktop/DEV/YaronJava/MORAC/build"
+			"value" : "c:/Users/Sir1Beany/MORAC/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -167,10 +167,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "C compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "C:/mingw64/bin/gcc.exe"
 		},
 		{
@@ -443,7 +443,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/build/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/Sir1Beany/MORAC/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -515,7 +515,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src"
+			"value" : "C:/Users/Sir1Beany/MORAC/src"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1151,7 +1151,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/build"
+			"value" : "C:/Users/Sir1Beany/MORAC/build"
 		},
 		{
 			"name" : "MORAC_IS_TOP_LEVEL",
@@ -1175,7 +1175,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src"
+			"value" : "C:/Users/Sir1Beany/MORAC/src"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

@@ -1,38 +1,38 @@
 [
 {
-  "directory": "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/build",
-  "command": "gcc  @CMakeFiles/morac_lib.dir/includes_C.rsp -g -g -O0 -std=gnu11 -Wall -Wextra -pedantic -o CMakeFiles\\morac_lib.dir\\src\\token.c.obj -c C:\\Users\\posna\\Desktop\\DEV\\YaronJava\\MORAC\\src\\src\\token.c",
-  "file": "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/src/token.c",
+  "directory": "C:/Users/Sir1Beany/MORAC/build",
+  "command": "gcc  @CMakeFiles/morac_lib.dir/includes_C.rsp -g -g -O0 -std=gnu11 -Wall -Wextra -pedantic -o CMakeFiles\\morac_lib.dir\\src\\token.c.obj -c C:\\Users\\Sir1Beany\\MORAC\\src\\src\\token.c",
+  "file": "C:/Users/Sir1Beany/MORAC/src/src/token.c",
   "output": "CMakeFiles/morac_lib.dir/src/token.c.obj"
 },
 {
-  "directory": "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/build",
-  "command": "gcc  @CMakeFiles/morac_lib.dir/includes_C.rsp -g -g -O0 -std=gnu11 -Wall -Wextra -pedantic -o CMakeFiles\\morac_lib.dir\\src\\lexer.c.obj -c C:\\Users\\posna\\Desktop\\DEV\\YaronJava\\MORAC\\src\\src\\lexer.c",
-  "file": "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/src/lexer.c",
+  "directory": "C:/Users/Sir1Beany/MORAC/build",
+  "command": "gcc  @CMakeFiles/morac_lib.dir/includes_C.rsp -g -g -O0 -std=gnu11 -Wall -Wextra -pedantic -o CMakeFiles\\morac_lib.dir\\src\\lexer.c.obj -c C:\\Users\\Sir1Beany\\MORAC\\src\\src\\lexer.c",
+  "file": "C:/Users/Sir1Beany/MORAC/src/src/lexer.c",
   "output": "CMakeFiles/morac_lib.dir/src/lexer.c.obj"
 },
 {
-  "directory": "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/build",
-  "command": "gcc  @CMakeFiles/morac_lib.dir/includes_C.rsp -g -g -O0 -std=gnu11 -Wall -Wextra -pedantic -o CMakeFiles\\morac_lib.dir\\src\\lexer\\chartype.c.obj -c C:\\Users\\posna\\Desktop\\DEV\\YaronJava\\MORAC\\src\\src\\lexer\\chartype.c",
-  "file": "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/src/lexer/chartype.c",
+  "directory": "C:/Users/Sir1Beany/MORAC/build",
+  "command": "gcc  @CMakeFiles/morac_lib.dir/includes_C.rsp -g -g -O0 -std=gnu11 -Wall -Wextra -pedantic -o CMakeFiles\\morac_lib.dir\\src\\lexer\\chartype.c.obj -c C:\\Users\\Sir1Beany\\MORAC\\src\\src\\lexer\\chartype.c",
+  "file": "C:/Users/Sir1Beany/MORAC/src/src/lexer/chartype.c",
   "output": "CMakeFiles/morac_lib.dir/src/lexer/chartype.c.obj"
 },
 {
-  "directory": "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/build",
-  "command": "gcc  @CMakeFiles/morac_lib.dir/includes_C.rsp -g -g -O0 -std=gnu11 -Wall -Wextra -pedantic -o CMakeFiles\\morac_lib.dir\\src\\lexer\\state.c.obj -c C:\\Users\\posna\\Desktop\\DEV\\YaronJava\\MORAC\\src\\src\\lexer\\state.c",
-  "file": "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/src/lexer/state.c",
+  "directory": "C:/Users/Sir1Beany/MORAC/build",
+  "command": "gcc  @CMakeFiles/morac_lib.dir/includes_C.rsp -g -g -O0 -std=gnu11 -Wall -Wextra -pedantic -o CMakeFiles\\morac_lib.dir\\src\\lexer\\state.c.obj -c C:\\Users\\Sir1Beany\\MORAC\\src\\src\\lexer\\state.c",
+  "file": "C:/Users/Sir1Beany/MORAC/src/src/lexer/state.c",
   "output": "CMakeFiles/morac_lib.dir/src/lexer/state.c.obj"
 },
 {
-  "directory": "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/build",
-  "command": "gcc  @CMakeFiles/morac_lib.dir/includes_C.rsp -g -g -O0 -std=gnu11 -Wall -Wextra -pedantic -o CMakeFiles\\morac_lib.dir\\src\\lexer\\state_utils.c.obj -c C:\\Users\\posna\\Desktop\\DEV\\YaronJava\\MORAC\\src\\src\\lexer\\state_utils.c",
-  "file": "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/src/lexer/state_utils.c",
+  "directory": "C:/Users/Sir1Beany/MORAC/build",
+  "command": "gcc  @CMakeFiles/morac_lib.dir/includes_C.rsp -g -g -O0 -std=gnu11 -Wall -Wextra -pedantic -o CMakeFiles\\morac_lib.dir\\src\\lexer\\state_utils.c.obj -c C:\\Users\\Sir1Beany\\MORAC\\src\\src\\lexer\\state_utils.c",
+  "file": "C:/Users/Sir1Beany/MORAC/src/src/lexer/state_utils.c",
   "output": "CMakeFiles/morac_lib.dir/src/lexer/state_utils.c.obj"
 },
 {
-  "directory": "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/build",
-  "command": "gcc  @CMakeFiles/test_lexer.dir/includes_C.rsp -g -g -O0 -std=gnu11 -Wall -Wextra -pedantic -o CMakeFiles\\test_lexer.dir\\tests\\test_lexer.c.obj -c C:\\Users\\posna\\Desktop\\DEV\\YaronJava\\MORAC\\src\\tests\\test_lexer.c",
-  "file": "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/tests/test_lexer.c",
+  "directory": "C:/Users/Sir1Beany/MORAC/build",
+  "command": "gcc  @CMakeFiles/test_lexer.dir/includes_C.rsp -g -g -O0 -std=gnu11 -Wall -Wextra -pedantic -o CMakeFiles\\test_lexer.dir\\tests\\test_lexer.c.obj -c C:\\Users\\Sir1Beany\\MORAC\\src\\tests\\test_lexer.c",
+  "file": "C:/Users/Sir1Beany/MORAC/src/tests/test_lexer.c",
   "output": "CMakeFiles/test_lexer.dir/tests/test_lexer.c.obj"
 }
 ]

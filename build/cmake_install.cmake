@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src
+# Install script for directory: C:/Users/Sir1Beany/MORAC/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/posna/Desktop/DEV/YaronJava/MORAC/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Sir1Beany/MORAC/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

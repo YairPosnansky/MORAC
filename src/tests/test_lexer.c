@@ -3,17 +3,18 @@
 #include <stdio.h>
 #include <string.h>
 
-
 void print_token(Token *token) {
-  printf("TOKEN: %-15s  LEXEME: '%-15s'  LINE: %d  COL: %d\n",
+  printf("\033[0;35mTOKEN:\033[0;32m %-15s  \033[0;36mLEXEME: "
+         "\033[0;32m'%-15s'  \033[0;34mLINE\033[0m: "
+         "%d  \033[0;34mCOL\033[0m: %d\n",
          get_token_name(token->type), token->lexeme, token->line,
          token->column);
 }
 
 void test_lexer_output(const char *source, const char *test_name) {
   printf("\n=== Testing %s ===\n", test_name);
-  printf("Source code:\n%s\n", source);
-  printf("\nLexical Analysis Output:\n");
+  printf("\033[0;34mSource code:\033[0m\n%s\n", source);
+  printf("\n\033[0;33mLexical Analysis Output:\033[0m\n");
   printf("------------------------------------------------------------\n");
 
   Lexer *lexer = lexer_create(source);
@@ -39,7 +40,8 @@ void test_lexer_output(const char *source, const char *test_name) {
     free_token(token);
   }
 
-  printf("------------------------------------------------------------\n\n");
+  printf("------------------------------------------------------------"
+         "\n\n");
   lexer_destroy(lexer);
 }
 
@@ -61,7 +63,9 @@ int main() {
   test_lexer_output(test2, "Control Structures and Operators");
 
   // Test 3
-  const char *test3 = "char c = 'X';\n";
+  const char *test3 = "hello char c = 'X';\n"
+                      "// hiiiiii :)\n"
+                      "char *str = \"hello there\"\n";
   test_lexer_output(test3, "Comments and Strings");
 
   // Test 4

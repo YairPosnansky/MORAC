@@ -1,8 +1,8 @@
 CMakeFiles/morac_lib.dir/src/lexer/state_utils.c.obj: \
- C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src\src\lexer\state_utils.c \
- C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/include/lexer/state_utils.h \
- C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/include/lexer/state.h \
- C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/include/lexer/chartype.h \
+ C:\Users\Sir1Beany\MORAC\src\src\lexer\state_utils.c \
+ C:/Users/Sir1Beany/MORAC/src/include/lexer/state_utils.h \
+ C:/Users/Sir1Beany/MORAC/src/include/lexer/state.h \
+ C:/Users/Sir1Beany/MORAC/src/include/lexer/chartype.h \
  C:/mingw64/x86_64-w64-mingw32/include/stdio.h \
  C:/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  C:/mingw64/x86_64-w64-mingw32/include/corecrt.h \
@@ -14,7 +14,7 @@ CMakeFiles/morac_lib.dir/src/lexer/state_utils.c.obj: \
  C:/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
  C:/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
  C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
- C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/include/token.h \
+ C:/Users/Sir1Beany/MORAC/src/include/token.h \
  C:/mingw64/x86_64-w64-mingw32/include/stdlib.h \
  C:/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \

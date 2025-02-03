@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <string.h>
 
-// Token Lifecycle
 Token *create_token(TokenType type, const char *lexeme, int line, int column) {
   Token *token = (Token *)malloc(sizeof(Token));
   if (!token) {

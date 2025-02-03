@@ -52,10 +52,10 @@ RM = C:\mingw64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src
+CMAKE_SOURCE_DIR = C:\Users\Sir1Beany\MORAC\src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\posna\Desktop\DEV\YaronJava\MORAC\build
+CMAKE_BINARY_DIR = C:\Users\Sir1Beany\MORAC\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/morac_lib.dir/depend.make
@@ -70,78 +70,78 @@ include CMakeFiles/morac_lib.dir/flags.make
 
 CMakeFiles/morac_lib.dir/src/token.c.obj: CMakeFiles/morac_lib.dir/flags.make
 CMakeFiles/morac_lib.dir/src/token.c.obj: CMakeFiles/morac_lib.dir/includes_C.rsp
-CMakeFiles/morac_lib.dir/src/token.c.obj: C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/src/token.c
+CMakeFiles/morac_lib.dir/src/token.c.obj: C:/Users/Sir1Beany/MORAC/src/src/token.c
 CMakeFiles/morac_lib.dir/src/token.c.obj: CMakeFiles/morac_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\posna\Desktop\DEV\YaronJava\MORAC\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/morac_lib.dir/src/token.c.obj"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/morac_lib.dir/src/token.c.obj -MF CMakeFiles\morac_lib.dir\src\token.c.obj.d -o CMakeFiles\morac_lib.dir\src\token.c.obj -c C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src\src\token.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Sir1Beany\MORAC\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/morac_lib.dir/src/token.c.obj"
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/morac_lib.dir/src/token.c.obj -MF CMakeFiles\morac_lib.dir\src\token.c.obj.d -o CMakeFiles\morac_lib.dir\src\token.c.obj -c C:\Users\Sir1Beany\MORAC\src\src\token.c
 
 CMakeFiles/morac_lib.dir/src/token.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/morac_lib.dir/src/token.c.i"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src\src\token.c > CMakeFiles\morac_lib.dir\src\token.c.i
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Sir1Beany\MORAC\src\src\token.c > CMakeFiles\morac_lib.dir\src\token.c.i
 
 CMakeFiles/morac_lib.dir/src/token.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/morac_lib.dir/src/token.c.s"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src\src\token.c -o CMakeFiles\morac_lib.dir\src\token.c.s
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Sir1Beany\MORAC\src\src\token.c -o CMakeFiles\morac_lib.dir\src\token.c.s
 
 CMakeFiles/morac_lib.dir/src/lexer.c.obj: CMakeFiles/morac_lib.dir/flags.make
 CMakeFiles/morac_lib.dir/src/lexer.c.obj: CMakeFiles/morac_lib.dir/includes_C.rsp
-CMakeFiles/morac_lib.dir/src/lexer.c.obj: C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/src/lexer.c
+CMakeFiles/morac_lib.dir/src/lexer.c.obj: C:/Users/Sir1Beany/MORAC/src/src/lexer.c
 CMakeFiles/morac_lib.dir/src/lexer.c.obj: CMakeFiles/morac_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\posna\Desktop\DEV\YaronJava\MORAC\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/morac_lib.dir/src/lexer.c.obj"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/morac_lib.dir/src/lexer.c.obj -MF CMakeFiles\morac_lib.dir\src\lexer.c.obj.d -o CMakeFiles\morac_lib.dir\src\lexer.c.obj -c C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src\src\lexer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Sir1Beany\MORAC\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/morac_lib.dir/src/lexer.c.obj"
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/morac_lib.dir/src/lexer.c.obj -MF CMakeFiles\morac_lib.dir\src\lexer.c.obj.d -o CMakeFiles\morac_lib.dir\src\lexer.c.obj -c C:\Users\Sir1Beany\MORAC\src\src\lexer.c
 
 CMakeFiles/morac_lib.dir/src/lexer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/morac_lib.dir/src/lexer.c.i"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src\src\lexer.c > CMakeFiles\morac_lib.dir\src\lexer.c.i
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Sir1Beany\MORAC\src\src\lexer.c > CMakeFiles\morac_lib.dir\src\lexer.c.i
 
 CMakeFiles/morac_lib.dir/src/lexer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/morac_lib.dir/src/lexer.c.s"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src\src\lexer.c -o CMakeFiles\morac_lib.dir\src\lexer.c.s
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Sir1Beany\MORAC\src\src\lexer.c -o CMakeFiles\morac_lib.dir\src\lexer.c.s
 
 CMakeFiles/morac_lib.dir/src/lexer/chartype.c.obj: CMakeFiles/morac_lib.dir/flags.make
 CMakeFiles/morac_lib.dir/src/lexer/chartype.c.obj: CMakeFiles/morac_lib.dir/includes_C.rsp
-CMakeFiles/morac_lib.dir/src/lexer/chartype.c.obj: C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/src/lexer/chartype.c
+CMakeFiles/morac_lib.dir/src/lexer/chartype.c.obj: C:/Users/Sir1Beany/MORAC/src/src/lexer/chartype.c
 CMakeFiles/morac_lib.dir/src/lexer/chartype.c.obj: CMakeFiles/morac_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\posna\Desktop\DEV\YaronJava\MORAC\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/morac_lib.dir/src/lexer/chartype.c.obj"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/morac_lib.dir/src/lexer/chartype.c.obj -MF CMakeFiles\morac_lib.dir\src\lexer\chartype.c.obj.d -o CMakeFiles\morac_lib.dir\src\lexer\chartype.c.obj -c C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src\src\lexer\chartype.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Sir1Beany\MORAC\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/morac_lib.dir/src/lexer/chartype.c.obj"
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/morac_lib.dir/src/lexer/chartype.c.obj -MF CMakeFiles\morac_lib.dir\src\lexer\chartype.c.obj.d -o CMakeFiles\morac_lib.dir\src\lexer\chartype.c.obj -c C:\Users\Sir1Beany\MORAC\src\src\lexer\chartype.c
 
 CMakeFiles/morac_lib.dir/src/lexer/chartype.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/morac_lib.dir/src/lexer/chartype.c.i"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src\src\lexer\chartype.c > CMakeFiles\morac_lib.dir\src\lexer\chartype.c.i
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Sir1Beany\MORAC\src\src\lexer\chartype.c > CMakeFiles\morac_lib.dir\src\lexer\chartype.c.i
 
 CMakeFiles/morac_lib.dir/src/lexer/chartype.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/morac_lib.dir/src/lexer/chartype.c.s"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src\src\lexer\chartype.c -o CMakeFiles\morac_lib.dir\src\lexer\chartype.c.s
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Sir1Beany\MORAC\src\src\lexer\chartype.c -o CMakeFiles\morac_lib.dir\src\lexer\chartype.c.s
 
 CMakeFiles/morac_lib.dir/src/lexer/state.c.obj: CMakeFiles/morac_lib.dir/flags.make
 CMakeFiles/morac_lib.dir/src/lexer/state.c.obj: CMakeFiles/morac_lib.dir/includes_C.rsp
-CMakeFiles/morac_lib.dir/src/lexer/state.c.obj: C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/src/lexer/state.c
+CMakeFiles/morac_lib.dir/src/lexer/state.c.obj: C:/Users/Sir1Beany/MORAC/src/src/lexer/state.c
 CMakeFiles/morac_lib.dir/src/lexer/state.c.obj: CMakeFiles/morac_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\posna\Desktop\DEV\YaronJava\MORAC\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/morac_lib.dir/src/lexer/state.c.obj"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/morac_lib.dir/src/lexer/state.c.obj -MF CMakeFiles\morac_lib.dir\src\lexer\state.c.obj.d -o CMakeFiles\morac_lib.dir\src\lexer\state.c.obj -c C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src\src\lexer\state.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Sir1Beany\MORAC\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/morac_lib.dir/src/lexer/state.c.obj"
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/morac_lib.dir/src/lexer/state.c.obj -MF CMakeFiles\morac_lib.dir\src\lexer\state.c.obj.d -o CMakeFiles\morac_lib.dir\src\lexer\state.c.obj -c C:\Users\Sir1Beany\MORAC\src\src\lexer\state.c
 
 CMakeFiles/morac_lib.dir/src/lexer/state.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/morac_lib.dir/src/lexer/state.c.i"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src\src\lexer\state.c > CMakeFiles\morac_lib.dir\src\lexer\state.c.i
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Sir1Beany\MORAC\src\src\lexer\state.c > CMakeFiles\morac_lib.dir\src\lexer\state.c.i
 
 CMakeFiles/morac_lib.dir/src/lexer/state.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/morac_lib.dir/src/lexer/state.c.s"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src\src\lexer\state.c -o CMakeFiles\morac_lib.dir\src\lexer\state.c.s
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Sir1Beany\MORAC\src\src\lexer\state.c -o CMakeFiles\morac_lib.dir\src\lexer\state.c.s
 
 CMakeFiles/morac_lib.dir/src/lexer/state_utils.c.obj: CMakeFiles/morac_lib.dir/flags.make
 CMakeFiles/morac_lib.dir/src/lexer/state_utils.c.obj: CMakeFiles/morac_lib.dir/includes_C.rsp
-CMakeFiles/morac_lib.dir/src/lexer/state_utils.c.obj: C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/src/lexer/state_utils.c
+CMakeFiles/morac_lib.dir/src/lexer/state_utils.c.obj: C:/Users/Sir1Beany/MORAC/src/src/lexer/state_utils.c
 CMakeFiles/morac_lib.dir/src/lexer/state_utils.c.obj: CMakeFiles/morac_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\posna\Desktop\DEV\YaronJava\MORAC\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/morac_lib.dir/src/lexer/state_utils.c.obj"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/morac_lib.dir/src/lexer/state_utils.c.obj -MF CMakeFiles\morac_lib.dir\src\lexer\state_utils.c.obj.d -o CMakeFiles\morac_lib.dir\src\lexer\state_utils.c.obj -c C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src\src\lexer\state_utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Sir1Beany\MORAC\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/morac_lib.dir/src/lexer/state_utils.c.obj"
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/morac_lib.dir/src/lexer/state_utils.c.obj -MF CMakeFiles\morac_lib.dir\src\lexer\state_utils.c.obj.d -o CMakeFiles\morac_lib.dir\src\lexer\state_utils.c.obj -c C:\Users\Sir1Beany\MORAC\src\src\lexer\state_utils.c
 
 CMakeFiles/morac_lib.dir/src/lexer/state_utils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/morac_lib.dir/src/lexer/state_utils.c.i"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src\src\lexer\state_utils.c > CMakeFiles\morac_lib.dir\src\lexer\state_utils.c.i
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Sir1Beany\MORAC\src\src\lexer\state_utils.c > CMakeFiles\morac_lib.dir\src\lexer\state_utils.c.i
 
 CMakeFiles/morac_lib.dir/src/lexer/state_utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/morac_lib.dir/src/lexer/state_utils.c.s"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src\src\lexer\state_utils.c -o CMakeFiles\morac_lib.dir\src\lexer\state_utils.c.s
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Sir1Beany\MORAC\src\src\lexer\state_utils.c -o CMakeFiles\morac_lib.dir\src\lexer\state_utils.c.s
 
 # Object files for target morac_lib
 morac_lib_OBJECTS = \
@@ -161,7 +161,7 @@ libmorac_lib.a: CMakeFiles/morac_lib.dir/src/lexer/state.c.obj
 libmorac_lib.a: CMakeFiles/morac_lib.dir/src/lexer/state_utils.c.obj
 libmorac_lib.a: CMakeFiles/morac_lib.dir/build.make
 libmorac_lib.a: CMakeFiles/morac_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\posna\Desktop\DEV\YaronJava\MORAC\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C static library libmorac_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Sir1Beany\MORAC\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C static library libmorac_lib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\morac_lib.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\morac_lib.dir\link.txt --verbose=$(VERBOSE)
 
@@ -174,6 +174,6 @@ CMakeFiles/morac_lib.dir/clean:
 .PHONY : CMakeFiles/morac_lib.dir/clean
 
 CMakeFiles/morac_lib.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src C:\Users\posna\Desktop\DEV\YaronJava\MORAC\build C:\Users\posna\Desktop\DEV\YaronJava\MORAC\build C:\Users\posna\Desktop\DEV\YaronJava\MORAC\build\CMakeFiles\morac_lib.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Sir1Beany\MORAC\src C:\Users\Sir1Beany\MORAC\src C:\Users\Sir1Beany\MORAC\build C:\Users\Sir1Beany\MORAC\build C:\Users\Sir1Beany\MORAC\build\CMakeFiles\morac_lib.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/morac_lib.dir/depend
 

@@ -1,8 +1,8 @@
 CMakeFiles/test_lexer.dir/tests/test_lexer.c.obj: \
- C:\Users\posna\Desktop\DEV\YaronJava\MORAC\src\tests\test_lexer.c \
- C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/include/lexer/lexer.h \
- C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/include/lexer/state.h \
- C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/include/lexer/chartype.h \
+ C:\Users\Sir1Beany\MORAC\src\tests\test_lexer.c \
+ C:/Users/Sir1Beany/MORAC/src/include/lexer/lexer.h \
+ C:/Users/Sir1Beany/MORAC/src/include/lexer/state.h \
+ C:/Users/Sir1Beany/MORAC/src/include/lexer/chartype.h \
  C:/mingw64/x86_64-w64-mingw32/include/stdio.h \
  C:/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  C:/mingw64/x86_64-w64-mingw32/include/corecrt.h \
@@ -14,9 +14,9 @@ CMakeFiles/test_lexer.dir/tests/test_lexer.c.obj: \
  C:/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
  C:/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
  C:/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
- C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/include/lexer/state_utils.h \
- C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/include/lexer/state.h \
- C:/Users/posna/Desktop/DEV/YaronJava/MORAC/src/include/token.h \
+ C:/Users/Sir1Beany/MORAC/src/include/lexer/state_utils.h \
+ C:/Users/Sir1Beany/MORAC/src/include/lexer/state.h \
+ C:/Users/Sir1Beany/MORAC/src/include/token.h \
  C:/mingw64/x86_64-w64-mingw32/include/stdlib.h \
  C:/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
