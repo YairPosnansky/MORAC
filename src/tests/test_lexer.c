@@ -1,5 +1,4 @@
 #include "lexer/lexer.h"
-#include <assert.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -33,28 +32,25 @@ void test_lexer_output(const char *source, const char *test_name) {
 
     print_token(token);
 
-    if (token->type == TOKEN_EOF || token->type == TOKEN_ERROR) {
+    if (token->type == TOKEN_EOF) {
       free_token(token);
       break;
     }
     free_token(token);
   }
 
-  printf("------------------------------------------------------------"
-         "\n\n");
+  printf("------------------------------------------------------------\n\n");
   lexer_destroy(lexer);
 }
 
 int main() {
-  // Test 1
   const char *test1 = "int main() {\n"
-                      "    int x = 42;\n"
-                      "    float y = 3.14;\n"
+                      "    int x@ = 42;\n"
+                      "    float y# = 3.14;\n"
                       "    return x;\n"
                       "}\n";
   test_lexer_output(test1, "Basic Declarations and Operations");
 
-  // Test 2
   const char *test2 = "if (x <= 10) {\n"
                       "    while (y > 0) {\n"
                       "        y -= 1.5;\n"
@@ -62,19 +58,16 @@ int main() {
                       "}\n";
   test_lexer_output(test2, "Control Structures and Operators");
 
-  // Test 3
   const char *test3 = "hello char c = 'X';\n"
                       "// hiiiiii :)\n"
                       "char *str = \"hello there\"\n";
   test_lexer_output(test3, "Comments and Strings");
 
-  // Test 4
   const char *test4 = "int calculate(int a, float b) {\n"
                       "    return (a + b) * 2 - (3 / a);\n"
                       "}\n";
   test_lexer_output(test4, "Complex Expressions");
 
-  // Test 5
   const char *test5 = "int test() {\n"
                       "    int valid = 42;\n"
                       "    char *str = \"unterminated;\n"
@@ -82,12 +75,12 @@ int main() {
                       "}\n";
   test_lexer_output(test5, "Error Cases");
 
-  // Test 6
   const char *test6 = "int test() {\n"
                       "    int valid = 42;\n"
                       "    return 0;\n"
                       "}\n"
                       "test()\n";
   test_lexer_output(test6, "Function Identifiers");
+
   return 0;
 }

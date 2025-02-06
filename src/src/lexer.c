@@ -115,14 +115,22 @@ Token *lexer_next_token(Lexer *lexer) {
   CharType char_type = get_char_type(c);
   LexerState state = STATE_START;
 
-  while (!is_final_state(state)) {
+  while (1) {
     state = get_next_state(state, char_type);
 
     switch (state) {
     case STATE_START: {
+      lexer_error(lexer, "Invalid character");
+      Token *error_token = lexer_make_token(lexer, TOKEN_ERROR);
+
+      lexer->lexeme_start = lexer->current;
+      if (lexer_is_at_end(lexer)) {
+        free_token(error_token);
+        return lexer_make_token(lexer, TOKEN_EOF);
+      }
       c = lexer_advance(lexer);
       char_type = get_char_type(c);
-      break;
+      return error_token;
     }
 
     case STATE_IDENTIFIER: {
@@ -167,7 +175,7 @@ Token *lexer_next_token(Lexer *lexer) {
       }
 
       if (lexer_is_at_end(lexer)) {
-        lexer_error(lexer, "Unterminated string.");
+        lexer_error(lexer, "Unterminated string");
         return lexer_make_token(lexer, TOKEN_ERROR);
       }
 
@@ -228,8 +236,46 @@ Token *lexer_next_token(Lexer *lexer) {
       return lexer_make_token(lexer, TOKEN_DIVIDE);
     }
 
+    case STATE_CHAR: {
+      if (lexer_peek(lexer) == '\'') {
+        lexer_error(lexer, "Empty character literal");
+        lexer_advance(lexer);
+        return lexer_make_token(lexer, TOKEN_ERROR);
+      }
+
+      if (lexer_peek(lexer) == '\\') {
+        lexer_advance(lexer);
+        if (!is_escape_sequence(lexer_peek(lexer))) {
+          lexer_error(lexer, "Invalid escape sequence");
+          while (lexer_peek(lexer) != '\'' && !lexer_is_at_end(lexer)) {
+            lexer_advance(lexer);
+          }
+          if (lexer_peek(lexer) == '\'')
+            lexer_advance(lexer);
+          return lexer_make_token(lexer, TOKEN_ERROR);
+        }
+        lexer_advance(lexer);
+      } else {
+        lexer_advance(lexer);
+      }
+
+      if (lexer_peek(lexer) != '\'') {
+        lexer_error(lexer,
+                    "Character literal must contain exactly one character");
+        while (lexer_peek(lexer) != '\'' && !lexer_is_at_end(lexer)) {
+          lexer_advance(lexer);
+        }
+        if (lexer_peek(lexer) == '\'')
+          lexer_advance(lexer);
+        return lexer_make_token(lexer, TOKEN_ERROR);
+      }
+
+      lexer_advance(lexer);
+      return lexer_make_token(lexer, TOKEN_CHAR_LIT);
+    }
+
     case STATE_ERROR: {
-      lexer_error(lexer, "Invalid character.");
+      lexer_error(lexer, "Invalid character");
       return lexer_make_token(lexer, TOKEN_ERROR);
     }
 
@@ -257,42 +303,9 @@ Token *lexer_next_token(Lexer *lexer) {
     }
 
     case STATE_FLOAT:
-    case STATE_CHAR: {
-
-      if (lexer_peek(lexer) == '\'') {
-        lexer_error(lexer, "Empty character literal");
-        return lexer_make_token(lexer, TOKEN_ERROR);
-      }
-
-      if (lexer_peek(lexer) == '\\') {
-        lexer_advance(lexer);
-        if (!is_escape_sequence(lexer_peek(lexer))) {
-          lexer_error(lexer, "Invalid escape sequence");
-          return lexer_make_token(lexer, TOKEN_ERROR);
-        }
-        lexer_advance(lexer);
-      } else {
-        lexer_advance(lexer);
-      }
-
-      if (lexer_peek(lexer) == '\'') {
-        lexer_advance(lexer);
-        return lexer_make_token(lexer, TOKEN_CHAR_LIT);
-      }
-
-      lexer_error(lexer,
-                  "Character literal must contain exactly one character");
-      return lexer_make_token(lexer, TOKEN_ERROR);
-    }
     case STATE_LINE_COMMENT:
     case STATE_BLOCK_COMMENT:
       break;
-
-    default:
-      lexer_error(lexer, "Invalid state encountered.");
-      return lexer_make_token(lexer, TOKEN_ERROR);
     }
   }
-  lexer_error(lexer, "Unexpected end of token processing");
-  return lexer_make_token(lexer, TOKEN_ERROR);
 }
