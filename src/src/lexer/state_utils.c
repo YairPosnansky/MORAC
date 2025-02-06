@@ -2,8 +2,6 @@
 #include <ctype.h>
 #include <string.h>
 
-
-// Compound operator handling
 int is_compound_operator(char current, char next) {
   switch (current) {
   case '+':
@@ -81,7 +79,6 @@ TokenType get_compound_operator_type(char first, char next) {
   return TOKEN_ERROR;
 }
 
-// Comment handling
 int is_block_comment_end(char current, char next) {
   return current == '*' && next == '/';
 }
@@ -112,93 +109,7 @@ void skip_block_comment(char **source) {
   }
 }
 
-// String/Char literal handling
 int is_escape_sequence(char next) {
   return next == 'n' || next == 't' || next == 'r' || next == '\\' ||
          next == '\'' || next == '\"';
-}
-
-char process_escape_sequence(char next) {
-  switch (next) {
-  case 'n':
-    return '\n';
-  case 't':
-    return '\t';
-  case 'r':
-    return '\r';
-  case '\\':
-    return '\\';
-  case '\'':
-    return '\'';
-  case '\"':
-    return '\"';
-  default:
-    return next;
-  }
-}
-
-// Number validation
-int is_valid_number_format(const char *lexeme) {
-  // Check if empty
-  if (!lexeme || !*lexeme)
-    return 0;
-
-  // First character must be digit
-  if (!isdigit(*lexeme))
-    return 0;
-
-  // Check remaining characters
-  while (*++lexeme) {
-    if (!isdigit(*lexeme))
-      return 0;
-  }
-
-  return 1;
-}
-
-int is_valid_float_format(const char *lexeme) {
-  // Check if empty
-  if (!lexeme || !*lexeme)
-    return 0;
-
-  // First character must be digit
-  if (!isdigit(*lexeme))
-    return 0;
-
-  int decimal_points = 0;
-
-  // Check remaining characters
-  while (*++lexeme) {
-    if (*lexeme == '.') {
-      decimal_points++;
-      if (decimal_points > 1)
-        return 0;
-    } else if (!isdigit(*lexeme)) {
-      return 0;
-    }
-  }
-
-  // Must have exactly one decimal point
-  return decimal_points == 1;
-}
-
-// State context management
-void save_state(StateContext *context, char *position, int line, int column,
-                LexerState state) {
-  if (context) {
-    context->position = position;
-    context->line = line;
-    context->column = column;
-    context->state = state;
-  }
-}
-
-void restore_state(StateContext *context, char **position, int *line,
-                   int *column, LexerState *state) {
-  if (context) {
-    *position = context->position;
-    *line = context->line;
-    *column = context->column;
-    *state = context->state;
-  }
 }

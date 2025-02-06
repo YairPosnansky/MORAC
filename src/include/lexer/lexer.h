@@ -6,25 +6,20 @@
 #include "token.h"
 #include <stdio.h>
 
-
 typedef struct {
   char *source;
   char *current;
   int line;
   int column;
-  StateContext context;
   char *lexeme_start;
 } Lexer;
 
-// Lexer lifecycle
 Lexer *lexer_create(const char *source);
 void lexer_destroy(Lexer *lexer);
 
-// Token operations
 Token *lexer_next_token(Lexer *lexer);
 void lexer_error(Lexer *lexer, const char *message);
 
-// Helper functions
 void lexer_skip_whitespace(Lexer *lexer);
 char lexer_peek(Lexer *lexer);
 char lexer_peek_next(Lexer *lexer);
